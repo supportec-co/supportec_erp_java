@@ -1,4 +1,4 @@
-package org.supportec.erp.example;
+package com.supportec.erp.erp;
 
 public class Main {
     public static void main(String[] args) {
