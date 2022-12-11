@@ -32,11 +32,6 @@ class PostsApiControllerTest {
     private PostsRepository postsRepository;
 
     @Test
-    public void cleanup() {
-        postsRepository.deleteAll();
-    }
-
-    @Test
     public void Posts_등록된다() throws Exception {
         //given
         String title = "title";
@@ -60,6 +55,7 @@ class PostsApiControllerTest {
     @Test
     public void Posts_수정된다() throws Exception {
         //given
+        postsRepository.deleteAll();
         Posts savedPosts = postsRepository.save(Posts.builder()
                 .title("title")
                 .content("content")
